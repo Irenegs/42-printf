@@ -6,7 +6,7 @@
 /*   By: irgonzal <irgonzal@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:02:19 by irgonzal          #+#    #+#             */
-/*   Updated: 2022/10/17 13:11:25 by irgonzal         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:57:16 by irgonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,13 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+
+typedef union type
+{
+	char	c;
+	char	*s;
+	int		i;
+	void	*p;
+}	type;
 
 #endif
