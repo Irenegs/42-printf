@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: irgonzal <irgonzal@student.42madrid>       +#+  +:+       +#+        */
+/*   By: irgonzal <irgonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 10:02:19 by irgonzal          #+#    #+#             */
-/*   Updated: 2022/12/23 15:57:16 by irgonzal         ###   ########.fr       */
+/*   Updated: 2023/01/20 10:36:39 by irgonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+/*# include "libft/libft.h"*/
+# include <stddef.h>
 
-typedef union type
-{
-	char	c;
-	char	*s;
-	int		i;
-	void	*p;
-}	type;
-
+int		ft_putnbr(int n);
+int		ft_putunsigned(unsigned int n);
+char	convert_hex(unsigned int n, char x);
+int		ft_puthex(unsigned int n, char x);
+int		ft_putpointer(long unsigned int n, int init);
+int		ft_printf(char const *format, ...);
+size_t	ft_strlen(char const *str);
 #endif
